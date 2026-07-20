@@ -326,12 +326,18 @@ window.addEventListener('scroll', () => {
        RECHEIOS
        ===================================================== */
 
-    function populateFillings(selectElement) {
-        selectElement.innerHTML = `
-            <option value="">
-                Selecione um recheio
-            </option>
-        `;
+    
+        function populateFillings(selectElement) {
+            selectElement.innerHTML = `
+                <option value="">
+                    Selecione um recheio
+                </option>
+
+                <option value="Sem recheio">
+                    Sem recheio
+                </option>
+            `;
+
 
         allFillings.forEach(fillingGroup => {
             const group = document.createElement("optgroup");
