@@ -17,3 +17,918 @@ footer{padding:3rem clamp(1rem,5vw,4rem) 1.5rem;background:#05041d;color:#fff}.f
 @media(max-width:980px){.site-header{--header:70px}.menu-toggle{display:flex}.main-nav{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0 clamp(1rem,4vw,2rem);max-height:0;overflow:hidden;opacity:0;background:rgba(9,8,45,.98);transition:max-height .35s,opacity .25s}.main-nav.open{max-height:600px;padding-top:1rem;padding-bottom:1.2rem;opacity:1}.main-nav>a{padding:1rem;border-bottom:1px solid rgba(255,255,255,.09);font-size:.84rem}.main-nav .nav-cta{text-align:center;margin-top:.7rem}.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-toggle.open span:nth-child(2){opacity:0}.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.manifesto-grid,.quality-grid,.region-panel{grid-template-columns:1fr}.manifesto-mark{text-align:left}.creation-layout{grid-template-columns:1fr}.creation-feature{grid-row:auto;min-height:560px}.creation-event{min-height:380px}.product-grid{grid-template-columns:repeat(2,1fr)}.events{grid-template-columns:1fr}.events-image{min-height:540px}.process-grid{grid-template-columns:repeat(2,1fr)}.footer-inner{grid-template-columns:1fr;gap:1.5rem;text-align:center}.footer-brand img{margin:auto}.footer-nav,.footer-social{justify-content:center}}
 @media(max-width:640px){.site-header{padding-inline:1rem}.brand span{font-size:1.05rem}.brand img{width:44px;height:44px}.hero{padding:calc(var(--header) + 3rem) 1rem 4rem;align-items:end}.hero h1{font-size:clamp(3.35rem,16vw,5.1rem)}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .button{width:100%}.scroll-cue{display:none}.section-heading{align-items:start;flex-direction:column}.manifesto-mark{font-size:9rem}.creation-feature{min-height:500px}.creation-event{min-height:300px}.product-grid{grid-template-columns:1fr}.events-image{min-height:380px}.events-content{padding:4rem 1rem}.process-grid{grid-template-columns:1fr}.region-panel{padding:2rem 1.2rem;gap:2rem}.final-cta img{width:105px;height:105px}.footer-nav,.footer-social{justify-content:center}.footer-copy{flex-direction:column;text-align:center}.floating-whatsapp{width:54px;height:54px;right:14px;bottom:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* =========================================================
+   MONTE SEU BOLO
+   ========================================================= */
+
+.cake-builder {
+    background: radial-gradient(
+        circle at 90% 10%,
+        rgba(213, 169, 65, 0.10),
+        transparent 35%
+    ),
+    #f8f3e8;
+}
+
+.cake-builder-heading {
+    margin-bottom: 50px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cake-builder-heading > div {
+    max-width: 760px;
+}
+
+.cake-builder-heading > p {
+    width: 100%;
+    max-width: 440px;
+
+    color: #716a78;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.cake-builder-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+    align-items: start;
+    gap: 30px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.cake-form {
+    min-width: 0;
+}
+
+.cake-step {
+    margin: 0 0 20px;
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(9, 8, 45, 0.10);
+    border-radius: 22px;
+
+    box-shadow: 0 14px 35px rgba(9, 8, 45, 0.045);
+}
+
+.cake-step legend {
+    padding: 0 12px 0 0;
+
+    color: #09082d;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cake-step legend span {
+    margin-right: 8px;
+
+    color: #d5a941;
+
+    font-size: 12px;
+}
+
+.cake-step-description {
+    margin: 8px 0 18px;
+
+    color: #716a78;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.cake-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.cake-field {
+    min-width: 0;
+
+    display: grid;
+    gap: 8px;
+
+    color: #49434d;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cake-field-full {
+    margin-top: 18px;
+}
+
+.cake-field input,
+.cake-field select,
+.cake-field textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: #fbf9f4;
+    color: #171321;
+
+    border: 1px solid rgba(9, 8, 45, 0.14);
+    border-radius: 12px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.cake-field input,
+.cake-field select {
+    min-height: 52px;
+}
+
+.cake-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.cake-field input:focus,
+.cake-field select:focus,
+.cake-field textarea:focus {
+    background: #ffffff;
+
+    border-color: #d5a941;
+
+    box-shadow: 0 0 0 4px rgba(213, 169, 65, 0.12);
+}
+
+.cake-field select:disabled {
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.cake-field-error {
+    min-height: 20px;
+    margin-top: 10px;
+
+    color: #c62828;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.cake-reference-note {
+    margin-top: 14px;
+
+    color: #8a838d;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   OPÇÕES DE MASSA
+   ========================================================= */
+
+.cake-options {
+    display: grid;
+    gap: 12px;
+}
+
+.cake-options-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cake-choice {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.cake-choice input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cake-choice span {
+    min-height: 50px;
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fbf9f4;
+    color: #49434d;
+
+    border: 1px solid rgba(9, 8, 45, 0.14);
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cake-choice:hover span {
+    transform: translateY(-2px);
+    border-color: #d5a941;
+}
+
+.cake-choice input:checked + span {
+    background: #09082d;
+    color: #ffffff;
+
+    border-color: #09082d;
+
+    box-shadow: 0 10px 25px rgba(9, 8, 45, 0.14);
+}
+
+.cake-choice input:focus-visible + span {
+    outline: 3px solid rgba(213, 169, 65, 0.45);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   ACEITE E BOTÃO
+   ========================================================= */
+
+.cake-acceptance {
+    padding: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    background: rgba(213, 169, 65, 0.10);
+
+    border: 1px solid rgba(213, 169, 65, 0.30);
+    border-radius: 16px;
+}
+
+.cake-acceptance input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+
+    flex: 0 0 18px;
+
+    accent-color: #09082d;
+}
+
+.cake-acceptance span {
+    color: #655c4b;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.cake-submit {
+    width: 100%;
+    min-height: 58px;
+    margin-top: 18px;
+    padding: 15px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4d680,
+            #d5a941
+        );
+
+    color: #09082d;
+
+    border: none;
+    border-radius: 999px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 14px 32px rgba(213, 169, 65, 0.24);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cake-submit:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 18px 38px rgba(213, 169, 65, 0.32);
+}
+
+.cake-form-message {
+    min-height: 22px;
+    margin-top: 10px;
+
+    color: #c62828;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESUMO
+   ========================================================= */
+
+.cake-summary {
+    position: sticky;
+    top: 105px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111044,
+            #09082d
+        );
+
+    color: #ffffff;
+
+    border: 1px solid rgba(213, 169, 65, 0.32);
+    border-radius: 26px;
+
+    box-shadow: 0 24px 55px rgba(9, 8, 45, 0.22);
+}
+
+.cake-summary-header span {
+    color: #d5a941;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.cake-summary-header h3 {
+    margin-top: 5px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    line-height: 1;
+}
+
+.cake-preview {
+    position: relative;
+
+    height: 180px;
+    margin: 26px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cake-preview-top {
+    position: relative;
+
+    width: 12px;
+    height: 38px;
+
+    background: #d5a941;
+
+    border-radius: 10px 10px 2px 2px;
+}
+
+.cake-preview-top::before {
+    content: "";
+
+    position: absolute;
+    top: -8px;
+    left: 50%;
+
+    width: 13px;
+    height: 13px;
+
+    background: #f4d680;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform: translateX(-50%) rotate(-45deg);
+
+    box-shadow: 0 0 16px rgba(244, 214, 128, 0.70);
+}
+
+.cake-preview-layer {
+    width: 200px;
+    height: 96px;
+
+    display: grid;
+    place-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8f0dc,
+            #dfcba0
+        );
+
+    color: #09082d;
+
+    border-radius: 20px 20px 12px 12px;
+
+    box-shadow: inset 0 -9px 0 rgba(213, 169, 65, 0.22);
+}
+
+.cake-preview-layer span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.cake-preview-base {
+    width: 235px;
+    height: 13px;
+
+    background: #d5a941;
+
+    border-radius: 50%;
+
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.30);
+}
+
+.cake-summary-list {
+    display: grid;
+}
+
+.cake-summary-list > div {
+    padding: 13px 0;
+
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.cake-summary-list span {
+    color: rgba(255, 255, 255, 0.44);
+
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cake-summary-list strong {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.cake-total {
+    margin-top: 22px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(213, 169, 65, 0.38);
+}
+
+.cake-total > span {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cake-total > strong {
+    display: block;
+    margin-top: 7px;
+
+    color: #f4d680;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 44px;
+    line-height: 1;
+}
+
+.cake-total small {
+    display: block;
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.51);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.cake-summary-alert {
+    margin-top: 20px;
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 14px;
+}
+
+.cake-summary-alert strong {
+    color: #f4d680;
+
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.cake-summary-alert p {
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+    .cake-builder-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cake-builder-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cake-summary {
+        position: static;
+    }
+
+    .cake-options-four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .cake-builder {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .cake-builder-heading {
+        margin-bottom: 30px;
+    }
+
+    .cake-builder-heading > p {
+        font-size: 14px;
+    }
+
+    .cake-step {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    .cake-form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .cake-options-four {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .cake-choice span {
+        min-height: 48px;
+        padding: 9px 5px;
+
+        font-size: 11px;
+    }
+
+    .cake-field input,
+    .cake-field select,
+    .cake-field textarea {
+        font-size: 16px;
+    }
+
+    .cake-summary {
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .cake-preview-layer {
+        width: 175px;
+    }
+
+    .cake-preview-base {
+        width: 205px;
+    }
+
+    .cake-summary-list > div {
+        grid-template-columns: 78px minmax(0, 1fr);
+    }
+
+    .cake-total > strong {
+        font-size: 38px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .cake-options-four {
+        grid-template-columns: 1fr;
+    }
+
+    .cake-summary-list > div {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .cake-summary-list strong {
+        text-align: left;
+    }
+}
+
+.cake-builder{background:radial-gradient(circle at 90% 10%,rgba(213,169,65,.1),transparent 35%),#f8f3e8}.cake-builder-heading{margin-bottom:50px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px}.cake-builder-heading>div{max-width:760px}.cake-builder-heading>p{width:100%;max-width:440px;color:#716a78;font-size:15px;line-height:1.8}.cake-builder-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);align-items:start;gap:30px}.cake-form{min-width:0}.cake-step{margin:0 0 20px;padding:28px;background:#fff;border:1px solid rgba(9,8,45,.1);border-radius:22px;box-shadow:0 14px 35px rgba(9,8,45,.045)}.cake-step legend{padding:0 12px 0 0;color:#09082d;font-family:Manrope,sans-serif;font-size:15px;font-weight:800}.cake-step legend span{margin-right:8px;color:#d5a941;font-size:12px}.cake-step-description{margin:4px 0 18px;color:#716a78;font-size:13px;line-height:1.6}.cake-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.cake-field{min-width:0;display:grid;gap:8px;color:#49434d;font-size:12px;font-weight:700}.cake-field-full{margin-top:18px}.cake-field input,.cake-field select,.cake-field textarea{width:100%;padding:14px 15px;background:#fbf9f4;color:#171321;border:1px solid rgba(9,8,45,.14);border-radius:12px;font-family:Manrope,sans-serif;font-size:15px;outline:none;transition:.2s}.cake-field input,.cake-field select{min-height:52px}.cake-field textarea{min-height:120px;resize:vertical}.cake-field input:focus,.cake-field select:focus,.cake-field textarea:focus{background:#fff;border-color:#d5a941;box-shadow:0 0 0 4px rgba(213,169,65,.12)}.cake-field select:disabled{color:#999;cursor:not-allowed}.cake-field-error{min-height:20px;margin-top:10px;color:#c62828;font-size:12px;line-height:1.5}.cake-reference-note{margin-top:14px;color:#8a838d;font-size:12px;line-height:1.6}.cake-options{display:grid;gap:12px}.cake-options-four{grid-template-columns:repeat(4,minmax(0,1fr))}.cake-choice{position:relative;cursor:pointer}.cake-choice input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}.cake-choice span{min-height:50px;padding:12px;display:flex;align-items:center;justify-content:center;background:#fbf9f4;color:#49434d;border:1px solid rgba(9,8,45,.14);border-radius:12px;font-size:13px;font-weight:700;text-align:center;transition:.2s}.cake-choice:hover span{transform:translateY(-2px);border-color:#d5a941}.cake-choice input:checked+span{background:#09082d;color:#fff;border-color:#09082d;box-shadow:0 10px 25px rgba(9,8,45,.14)}.cake-acceptance{padding:20px;display:flex;align-items:flex-start;gap:12px;background:rgba(213,169,65,.1);border:1px solid rgba(213,169,65,.3);border-radius:16px}.cake-acceptance input{width:18px;height:18px;margin-top:2px;flex:0 0 18px;accent-color:#09082d}.cake-acceptance span{color:#655c4b;font-size:12px;line-height:1.7}.cake-submit{width:100%;min-height:58px;margin-top:18px;padding:15px 24px;background:linear-gradient(135deg,#f4d680,#d5a941);color:#09082d;border:0;border-radius:999px;font-family:Manrope,sans-serif;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 14px 32px rgba(213,169,65,.24);transition:.25s}.cake-submit:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(213,169,65,.32)}.cake-form-message{min-height:22px;margin-top:10px;color:#c62828;font-size:12px;text-align:center}.cake-summary{position:sticky;top:105px;padding:28px;background:linear-gradient(145deg,#111044,#09082d);color:#fff;border:1px solid rgba(213,169,65,.32);border-radius:26px;box-shadow:0 24px 55px rgba(9,8,45,.22)}.cake-summary-header span{color:#d5a941;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.cake-summary-header h3{margin-top:5px;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1}.cake-preview{position:relative;height:180px;margin:26px 0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}.cake-preview-top{position:relative;width:12px;height:38px;background:#d5a941;border-radius:10px 10px 2px 2px}.cake-preview-top:before{content:'';position:absolute;top:-8px;left:50%;width:13px;height:13px;background:#f4d680;border-radius:50% 50% 50% 0;transform:translateX(-50%) rotate(-45deg);box-shadow:0 0 16px rgba(244,214,128,.7)}.cake-preview-layer{width:200px;height:96px;display:grid;place-items:center;background:linear-gradient(145deg,#f8f0dc,#dfcba0);color:#09082d;border-radius:20px 20px 12px 12px;box-shadow:inset 0 -9px 0 rgba(213,169,65,.22)}.cake-preview-layer span{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700}.cake-preview-base{width:235px;height:13px;background:#d5a941;border-radius:50%;box-shadow:0 12px 20px rgba(0,0,0,.3)}.cake-summary-list{display:grid}.cake-summary-list>div{padding:13px 0;display:grid;grid-template-columns:90px minmax(0,1fr);gap:12px;border-bottom:1px solid rgba(255,255,255,.1)}.cake-summary-list span{color:rgba(255,255,255,.44);font-size:10px;font-weight:700;text-transform:uppercase}.cake-summary-list strong{color:rgba(255,255,255,.88);font-size:12px;font-weight:600;line-height:1.5;text-align:right}.cake-total{margin-top:22px;padding-top:20px;border-top:1px solid rgba(213,169,65,.38)}.cake-total>span{display:block;color:rgba(255,255,255,.5);font-size:10px;font-weight:700;text-transform:uppercase}.cake-total>strong{display:block;margin-top:7px;color:#f4d680;font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1}.cake-total small{display:block;margin-top:10px;color:rgba(255,255,255,.51);font-size:10px;line-height:1.6}.cake-summary-alert{margin-top:20px;padding:15px;background:rgba(255,255,255,.06);border-radius:14px}.cake-summary-alert strong{color:#f4d680;font-size:11px;text-transform:uppercase}.cake-summary-alert p{margin-top:5px;color:rgba(255,255,255,.58);font-size:10px;line-height:1.6}@media(max-width:980px){.cake-builder-heading{align-items:flex-start;flex-direction:column;gap:20px}.cake-builder-layout{grid-template-columns:1fr}.cake-summary{position:static}.cake-options-four{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.cake-builder{padding-left:15px;padding-right:15px}.cake-builder-heading{margin-bottom:30px}.cake-step{padding:20px 16px;border-radius:18px}.cake-form-grid{grid-template-columns:1fr;gap:15px}.cake-options-four{grid-template-columns:1fr 1fr;gap:8px}.cake-choice span{min-height:48px;padding:9px 5px;font-size:11px}.cake-field input,.cake-field select,.cake-field textarea{font-size:16px}.cake-summary{padding:22px 18px;border-radius:20px}.cake-preview-layer{width:175px}.cake-preview-base{width:205px}.cake-summary-list>div{grid-template-columns:78px minmax(0,1fr)}.cake-total>strong{font-size:38px}}@media(max-width:380px){.cake-options-four{grid-template-columns:1fr}.cake-summary-list>div{grid-template-columns:1fr;gap:5px}.cake-summary-list strong{text-align:left}}
+
+
+/* =========================================================
+   EXPANDIR E MINIMIZAR O MONTADOR
+   ========================================================= */
+
+.cake-builder-intro-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: -10px auto 0;
+    text-align: center;
+}
+
+.cake-builder-toggle {
+    min-width: 220px;
+    min-height: 58px;
+    padding: 14px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: linear-gradient(135deg, #f4d680, #d5a941);
+    color: #09082d;
+    border: 0;
+    border-radius: 999px;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 14px 32px rgba(213, 169, 65, 0.24);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cake-builder-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(213, 169, 65, 0.34);
+}
+
+.cake-builder-toggle-icon {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    background: #09082d;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.cake-builder-toggle[aria-expanded="true"] .cake-builder-toggle-icon {
+    transform: rotate(45deg);
+}
+
+.cake-builder-intro-note {
+    max-width: 460px;
+    color: #817987;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.cake-builder-content {
+    margin-top: 38px;
+}
+
+.cake-builder-content[hidden] {
+    display: none !important;
+}
+
+.cake-builder-content.is-opening {
+    animation: cakeBuilderOpen 0.48s ease both;
+}
+
+@keyframes cakeBuilderOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cake-builder-bottom-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.cake-builder-minimize {
+    min-height: 48px;
+    padding: 12px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    color: #09082d;
+    border: 1px solid rgba(9, 8, 45, 0.24);
+    border-radius: 999px;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cake-builder-minimize:hover {
+    background: #09082d;
+    color: #ffffff;
+}
+
+@media (max-width: 640px) {
+    .cake-builder-intro-actions {
+        align-items: stretch;
+    }
+
+    .cake-builder-toggle,
+    .cake-builder-minimize {
+        width: 100%;
+    }
+
+    .cake-builder-content {
+        margin-top: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cake-builder-content.is-opening {
+        animation: none;
+    }
+}
+
+
+/* =========================================================
+   MONTE SEU BOLO - FUNDO IGUAL AO CARDÁPIO
+   ========================================================= */
+
+/* Área externa fechada: mesma cor da seção de cardápio */
+.cake-builder {
+    background: #111044;
+    color: #ffffff;
+}
+
+/* Título principal */
+.cake-builder .cake-builder-heading h2 {
+    color: #ffffff;
+}
+
+/* Parte destacada do título */
+.cake-builder .cake-builder-heading h2 em {
+    color: #d5a941;
+}
+
+/* Texto explicativo ao lado do título */
+.cake-builder .cake-builder-heading > p {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+/* Pequeno título: PEDIDO PERSONALIZADO */
+.cake-builder .section-kicker {
+    color: #d5a941;
+}
+
+/* Texto abaixo do botão Começar agora */
+.cake-builder .cake-builder-intro-note {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+/* Mantém os campos abertos com o visual claro atual */
+.cake-builder-content {
+    padding: clamp(22px, 4vw, 42px);
+
+    background: #f8f3e8;
+    color: #171321;
+
+    border-radius: 28px;
+}
+
+/* Mantém o título e conteúdo interno dos blocos escuros */
+.cake-builder-content .cake-step {
+    color: #171321;
+}
+
+/* Mantém o resumo com o azul-marinho atual */
+.cake-builder-content .cake-summary {
+    background: linear-gradient(
+        145deg,
+        #111044,
+        #09082d
+    );
+
+    color: #ffffff;
+}
+
+/* Botão inferior visível sobre o fundo claro */
+.cake-builder-content .cake-builder-minimize {
+    color: #09082d;
+    border-color: rgba(9, 8, 45, 0.24);
+}
+
+.cake-builder-content .cake-builder-minimize:hover {
+    background: #09082d;
+    color: #ffffff;
+}
+
+
+@media (max-width: 640px) {
+
+    .cake-builder-content {
+        padding: 18px 12px;
+        border-radius: 20px;
+    }
+
+}
+
+
+/* Alinha o botão Começar agora à esquerda somente no desktop */
+
+@media (min-width: 641px) {
+
+    .cake-builder-intro-actions {
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .cake-builder-intro-note {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+
+}
