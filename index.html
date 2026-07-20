@@ -42,6 +42,7 @@
     </button>
 
     <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#monte-seu-bolo">Monte seu bolo</a>
       <a href="#criacoes">Criações</a>
       <a href="#encomendas">Encomendas</a>
       <a href="#eventos">Eventos</a>
@@ -64,13 +65,15 @@
         <p>Bolos artísticos, doces gourmet e salgados preparados sob encomenda para celebrações, eventos e empresas em Charqueadas e região.</p>
         <div class="hero-actions">
           <a class="button button-gold" href="https://wa.me/555196747499?text=Ol%C3%A1%2C%20Igor%20Cakes%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20uma%20encomenda." target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
-          <a class="button button-ghost" href="#criacoes">Conhecer criações</a>
+          <a class="button button-ghost" href="#monte-seu-bolo">Monte seu bolo</a>
         </div>
         <p class="hero-note"><span></span> Produção exclusivamente sob encomenda</p>
       </div>
       <a class="scroll-cue" href="#manifesto" aria-label="Conhecer a Igor Cakes">Role para descobrir</a>
     </section>
 
+
+    
     <section class="manifesto section" id="manifesto">
       <div class="section-shell manifesto-grid">
         <div class="manifesto-mark reveal">IC</div>
@@ -139,7 +142,174 @@
           <article class="product-card product-cta reveal"><h3>Tem uma ideia diferente?</h3><p>Conte o que você imagina. A Igor Cakes prepara uma proposta personalizada.</p><a href="https://wa.me/555196747499?text=Ol%C3%A1%2C%20Igor%20Cakes%21%20Tenho%20uma%20ideia%20para%20uma%20encomenda%20personalizada." target="_blank" rel="noopener noreferrer">Conversar no WhatsApp →</a></article>
         </div>
       </div>
-    </section>
+</section>
+
+<!-- =========================================================
+     MONTE SEU BOLO
+     ========================================================= -->
+
+<section class="cake-builder section" id="monte-seu-bolo">
+  <div class="section-shell">
+    <header class="cake-builder-heading reveal">
+      <div>
+        <span class="section-kicker">Pedido personalizado</span>
+        <h2>Monte o seu <em>bolo dos sonhos.</em></h2>
+      </div>
+      <p>Escolha o formato, tamanho, massa, recheios e decoração. Ao final, todos os detalhes serão enviados para o WhatsApp da Igor Cakes.</p>
+    </header>
+
+    <div class="cake-builder-intro-actions">
+      <button
+        class="cake-builder-toggle"
+        id="cakeBuilderToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="cakeBuilderContent"
+      >
+        <span class="cake-builder-toggle-text">Começar agora</span>
+        <span class="cake-builder-toggle-icon" aria-hidden="true">+</span>
+      </button>
+
+      <p class="cake-builder-intro-note">
+        Leva poucos minutos. Você poderá revisar o resumo antes de abrir o WhatsApp.
+      </p>
+    </div>
+
+    <div
+      class="cake-builder-content"
+      id="cakeBuilderContent"
+      hidden
+    >
+      <div class="cake-builder-layout">
+      <form class="cake-form reveal" id="cakeOrderForm">
+        <fieldset class="cake-step">
+          <legend><span>01</span> Formato e tamanho</legend>
+          <div class="cake-form-grid">
+            <label class="cake-field">Formato do bolo
+              <select id="cakeFormat" required>
+                <option value="">Selecione o formato</option>
+                <option value="redondo">Redondo</option>
+                <option value="quadrado">Quadrado</option>
+              </select>
+            </label>
+            <label class="cake-field">Tamanho
+              <select id="cakeSize" required disabled>
+                <option value="">Primeiro selecione o formato</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="cake-step">
+          <legend><span>02</span> Escolha a massa</legend>
+          <div class="cake-options cake-options-four">
+            <label class="cake-choice"><input type="radio" name="cakeMass" value="Baunilha" required><span>Baunilha</span></label>
+            <label class="cake-choice"><input type="radio" name="cakeMass" value="Red Velvet"><span>Red Velvet</span></label>
+            <label class="cake-choice"><input type="radio" name="cakeMass" value="Chocolate"><span>Chocolate</span></label>
+            <label class="cake-choice"><input type="radio" name="cakeMass" value="Mista"><span>Mista</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="cake-step">
+          <legend><span>03</span> Escolha dois recheios</legend>
+          <p class="cake-step-description">Escolha dois recheios diferentes.</p>
+          <div class="cake-form-grid">
+            <label class="cake-field">Primeiro recheio<select id="cakeFillingOne" required><option value="">Selecione o primeiro recheio</option></select></label>
+            <label class="cake-field">Segundo recheio<select id="cakeFillingTwo" required><option value="">Selecione o segundo recheio</option></select></label>
+          </div>
+          <p class="cake-field-error" id="fillingError" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset class="cake-step">
+          <legend><span>04</span> Decoração</legend>
+          <div class="cake-form-grid">
+            <label class="cake-field">Tipo de decoração
+              <select id="cakeDecoration" required>
+                <option value="">Selecione a decoração</option>
+                <option value="Tradicional em chantininho" data-consultation="false">Tradicional em chantininho - incluso</option>
+                <option value="Personalizada" data-consultation="true">Personalizada - sob consulta</option>
+                <option value="Decoração em chocolate" data-consultation="true">Decoração em chocolate - sob consulta</option>
+                <option value="Decoração com flores" data-consultation="true">Decoração com flores - sob consulta</option>
+              </select>
+            </label>
+            <label class="cake-field">Topo de bolo
+              <select id="cakeTopper">
+                <option value="Sem topo" data-price="0">Sem topo</option>
+                <option value="Topo de bolo simples" data-price="10">Topo simples - R$ 10,00</option>
+                <option value="Topo de bolo em 3D" data-price="15">Topo em 3D - R$ 15,00</option>
+              </select>
+            </label>
+            <label class="cake-field">Tema ou ocasião<input type="text" id="cakeTheme" maxlength="120" placeholder="Ex.: aniversário, casamento..." required></label>
+            <label class="cake-field">Cores desejadas<input type="text" id="cakeColors" maxlength="100" placeholder="Ex.: azul, dourado e branco"></label>
+          </div>
+          <label class="cake-field cake-field-full">Como você imagina a decoração?<textarea id="cakeDecorationDetails" rows="4" maxlength="500" placeholder="Descreva elementos, estilo, nome, idade e outros detalhes."></textarea></label>
+          <p class="cake-reference-note">Depois de abrir o WhatsApp, você poderá enviar imagens de referência na conversa.</p>
+        </fieldset>
+
+        <fieldset class="cake-step">
+          <legend><span>05</span> Recebimento</legend>
+          <div class="cake-form-grid">
+            <label class="cake-field">Como deseja receber?
+              <select id="cakeDelivery" required>
+                <option value="">Selecione uma opção</option>
+                <option value="Retirada" data-price="0">Retirada</option>
+                <option value="Tele-entrega" data-price="10">Tele-entrega - a partir de R$ 10,00</option>
+              </select>
+            </label>
+            <label class="cake-field">Data desejada<input type="date" id="cakeDate" required></label>
+            <label class="cake-field">Cidade<input type="text" id="cakeCity" maxlength="80" placeholder="Informe a cidade" required></label>
+            <label class="cake-field">Bairro<input type="text" id="cakeNeighborhood" maxlength="80" placeholder="Informe o bairro"></label>
+          </div>
+          <p class="cake-field-error" id="dateError" aria-live="polite"></p>
+        </fieldset>
+
+        <fieldset class="cake-step">
+          <legend><span>06</span> Seus dados</legend>
+          <div class="cake-form-grid">
+            <label class="cake-field">Nome<input type="text" id="customerName" maxlength="100" autocomplete="name" required></label>
+            <label class="cake-field">Número de convidados<input type="number" id="guestCount" min="1" max="500" placeholder="Ex.: 20"></label>
+          </div>
+          <label class="cake-field cake-field-full">Observações<textarea id="cakeNotes" rows="4" maxlength="500" placeholder="Alergias, restrições ou informações adicionais."></textarea></label>
+        </fieldset>
+
+        <label class="cake-acceptance"><input type="checkbox" id="cakeTerms" required><span>Estou ciente de que o pedido depende de disponibilidade, deve ser realizado com pelo menos sete dias de antecedência e somente será confirmado após o pagamento de 50% do valor.</span></label>
+        <button class="cake-submit" type="submit">Finalizar pelo WhatsApp</button>
+        <p class="cake-form-message" id="cakeFormMessage" aria-live="polite"></p>
+      </form>
+
+      <aside class="cake-summary reveal">
+        <div class="cake-summary-header"><span>Resumo da encomenda</span><h3>Seu bolo</h3></div>
+        <div class="cake-preview" aria-hidden="true"><div class="cake-preview-top"></div><div class="cake-preview-layer"><span>Igor Cakes</span></div><div class="cake-preview-base"></div></div>
+        <div class="cake-summary-list">
+          <div><span>Formato</span><strong id="summaryFormat">Não selecionado</strong></div>
+          <div><span>Tamanho</span><strong id="summarySize">Não selecionado</strong></div>
+          <div><span>Massa</span><strong id="summaryMass">Não selecionada</strong></div>
+          <div><span>Recheios</span><strong id="summaryFillings">Não selecionados</strong></div>
+          <div><span>Decoração</span><strong id="summaryDecoration">Não selecionada</strong></div>
+          <div><span>Topo</span><strong id="summaryTopper">Sem topo</strong></div>
+          <div><span>Recebimento</span><strong id="summaryDelivery">Não selecionado</strong></div>
+        </div>
+        <div class="cake-total"><span>Valor estimado</span><strong id="summaryTotal">R$ 0,00</strong><small id="summaryConsultation">O valor final será confirmado pela Igor Cakes.</small></div>
+        <div class="cake-summary-alert"><strong>Importante</strong><p>Decorações especiais e tele-entrega podem acrescentar valores ao pedido.</p></div>
+      </aside>
+      </div>
+
+      <div class="cake-builder-bottom-actions">
+        <button
+          class="cake-builder-minimize"
+          id="cakeBuilderMinimize"
+          type="button"
+        >
+          Minimizar montador
+          <span aria-hidden="true">↑</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
 
     <section class="events" id="eventos">
       <div class="events-image"><img src="imagens/mesa.png" alt="Mesa de doces da Igor Cakes para eventos" loading="lazy"></div>
@@ -157,6 +327,9 @@
       </div>
     </section>
 
+
+    
+
     <section class="quality section" id="qualidade">
       <div class="section-shell quality-grid">
         <div class="quality-copy reveal">
@@ -171,6 +344,8 @@
         </div>
       </div>
     </section>
+
+    
 
     <section class="process section">
       <div class="section-shell">
@@ -211,7 +386,7 @@
   <footer>
     <div class="footer-inner">
       <a class="footer-brand" href="#hero"><img src="imagens/logo-igor-cakes.png" alt="Igor Cakes"></a>
-      <nav class="footer-nav" aria-label="Navegação do rodapé"><a href="#criacoes">Criações</a><a href="#encomendas">Encomendas</a><a href="#eventos">Eventos</a><a href="#regiao">Atendimento</a></nav>
+      <nav class="footer-nav" aria-label="Navegação do rodapé"><a href="#monte-seu-bolo">Monte seu bolo</a><a href="#criacoes">Criações</a><a href="#encomendas">Encomendas</a><a href="#eventos">Eventos</a><a href="#regiao">Atendimento</a></nav>
       <div class="footer-social"><a href="https://www.instagram.com/igor_cakes/" target="_blank" rel="noopener noreferrer">@igor_cakes ↗</a><a href="https://wa.me/555196747499" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
     </div>
     <div class="footer-copy"><span>© 2026 Igor Cakes. Todos os direitos reservados.</span><span>Produção exclusivamente sob encomenda.</span></div>
